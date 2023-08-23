@@ -1,26 +1,26 @@
 specVersion: 0.34.0
 name: myfunc
 runtime: go
-registry: ""
-image: ""
-imageDigest: ""
+registry: https://github.com/naogoulemei/func_hello.git
+image: harbor.zyun.360.cn/buildpack_test/myfunc:latest
+imageDigest: sha256:30acec397fa63cb91cc75f9c6920b2f3415421f850b52e5f577944939c3704c7
 created: 2023-08-22T17:55:35.366725+08:00
 invocation:
   format: http
 build:
   git:
-    url: https://github.com/naogoulemei/func_hello.git # required, git repository with the function source code
-    revision: main                                    # optional, git revision to be used (branch, tag,commit)
+    url: https://github.com/naogoulemei/func_hello.git
+    revision: main
   buildpacks:
   - paketo-buildpacks/go-dist
   - ghcr.io/boson-project/go-function-buildpack:tip
-  builder: ""
+  builder: pack
   buildEnvs: []
 run:
   volumes: []
   envs: []
 deploy:
-  namespace: ""
+  namespace: rr-default
   annotations: {}
   options: {}
   labels: []

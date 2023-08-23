@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# func_hello
-=======
 # Go HTTP Function
 
 Welcome to your new Go Function! The boilerplate function code can be found in
@@ -21,4 +18,3 @@ curl http://myfunction.example.com/
 For more, see [the complete documentation]('https://github.com/knative/func/tree/main/docs')
 
 
->>>>>>> 022e22b (implementing my-function)
